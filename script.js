@@ -1,85 +1,52 @@
 // Add default public map token from Mapbox.
 mapboxgl.accessToken = "pk.eyJ1IjoiaXcwMCIsImEiOiJjbTV2aXFlajYwMjZmMmtvbWtrMGRhd3lkIn0.DbEVxhgWv4ANYwpIpCc4iA"; 
 
+// Create map object
 const map = new mapboxgl.Map({
-    container: "tick-map", // map container ID
-    style: "mapbox://styles/iw00/cm6wke90700h201s17joz8hyy", // style URL
-    center: [-79.371, 43.684], // starting position [lng, lat]
-    zoom: 11 // starting zoom
+    container: "tick-map", // Map container ID
+    style: "mapbox://styles/iw00/cm6wke90700h201s17joz8hyy", // Style URL from Mapbox
+    center: [-79.371, 43.684], // Starting position [lng, lat] in Toronto
+    zoom: 10 // Starting zoom level
 })
 
 map.on("load", () => {
 
-    // Add stargazing sites as points
-    // map.addSource("stargazing-sites", {
-    //     type: "geojson",
-    //     data: "https://iw-00.github.io/ggr472-lab1/data/stargazing_sites.geojson"
-    // });
-    
-    // map.addLayer({
-    //     id: "stargazing-pt",
-    //     type: "circle",
-    //     source: "stargazing-sites",
-    //     paint: {
-    //         "circle-radius": 4,
-    //         "circle-color": "#ebe834"
-    //     }
-    // })
+    // Add green space data from Mapbox tileset.
+    map.addSource("green-space-data", {
+        type: "vector",
+        url: "mapbox://iw00.1c0ufy8s"
+        // data: "data//toronto-green.geojson"
+    });
 
-    // Add buildings as points
-    map.addSource("buildings-data", {
+    // Draw green spaces.
+    map.addLayer({
+        id: "green-space",
+        type: "fill",
+        source: "green-space-data",
+        paint: {
+            "fill-color": "#86D56C",
+            "fill-opacity": 0.3,
+            "fill-outline-color": "#3F612D"
+        },
+        "source-layer": "toronto-green-0vll2h"
+    });
+
+    // Add ticks as points from GitHub (geojson).
+    map.addSource("ticks-data", {
         type: "geojson",
-        data: "https://raw.githubusercontent.com/iw-00/ggr472-ex4/refs/heads/main/data/buildings.geojson"
+        data: "https://raw.githubusercontent.com/iw-00/ggr472-lab2-test/refs/heads/main/data/toronto-ticks.geojson"
     });
     
+    // Draw tick points.
     map.addLayer({
-        id: "buildings-pt",
-        type: "circle",
-        source: "buildings-data",
+        id: "ticks-pts", // Layer ID
+        type: "circle", // Draw as points
+        source: "ticks-data",
         paint: {
             "circle-radius": 4,
-            "circle-color": "#1ff258"
+            "circle-color": "#ffd903"
         }
     });
-
-        // Add ticks as points
-        map.addSource("toronto-ticks", {
-            type: "geojson",
-            data: "https://raw.githubusercontent.com/iw-00/ggr472-ex4/refs/heads/main/data/buildings.geojson"
-        });
-        
-        map.addLayer({
-            id: "buildings-pt",
-            type: "circle",
-            source: "buildings-data",
-            paint: {
-                "circle-radius": 4,
-                "circle-color": "#1ff258"
-            }
-        });
-
-    // Add Toronto census tracts (zoom in to see on map).
-    map.addSource("toronto-ct-data", {
-        type: "vector",
-        url: "mapbox://iw00.c9uhqvg4"
-    });
-
-    map.addLayer({
-        id: "toronto-ct",
-        type: "fill",
-        source: "toronto-ct-data",
-        paint: {
-            "fill-color": "#f768c5",
-            "fill-opacity": 0.4,
-            "fill-outline-color": "#8f1464"
-        },
-        "source-layer": "torontoct-0pw4sa"
-    },
-    // Draw building points over census tracts.
-    "buildings-pt"
-);
-
-    
 
 
 
