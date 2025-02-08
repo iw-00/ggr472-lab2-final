@@ -4,8 +4,8 @@ mapboxgl.accessToken = "pk.eyJ1IjoiaXcwMCIsImEiOiJjbTV2aXFlajYwMjZmMmtvbWtrMGRhd
 const map = new mapboxgl.Map({
     container: "tick-map", // map container ID
     style: "mapbox://styles/iw00/cm6wke90700h201s17joz8hyy", // style URL
-    center: [-79.3567, 43.9845], // starting position [lng, lat]
-    zoom: 5 // starting zoom
+    center: [-79.371, 43.684], // starting position [lng, lat]
+    zoom: 11 // starting zoom
 })
 
 map.on("load", () => {
@@ -41,6 +41,22 @@ map.on("load", () => {
             "circle-color": "#1ff258"
         }
     });
+
+        // Add ticks as points
+        map.addSource("toronto-ticks", {
+            type: "geojson",
+            data: "https://raw.githubusercontent.com/iw-00/ggr472-ex4/refs/heads/main/data/buildings.geojson"
+        });
+        
+        map.addLayer({
+            id: "buildings-pt",
+            type: "circle",
+            source: "buildings-data",
+            paint: {
+                "circle-radius": 4,
+                "circle-color": "#1ff258"
+            }
+        });
 
     // Add Toronto census tracts (zoom in to see on map).
     map.addSource("toronto-ct-data", {
