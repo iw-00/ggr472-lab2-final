@@ -12,7 +12,7 @@ This map shows the dragging locations for tick surveillance, as well as Toronto'
 
 The map includes:
 
-* A Mapbox style I created as a basemap. [View on Mapbox.](https://api.mapbox.com/styles/v1/iw00/cm6wke90700h201s17joz8hyy.html?title=view&access_token=pk.eyJ1IjoiaXcwMCIsImEiOiJjbTV2aXFlajYwMjZmMmtvbWtrMGRhd3lkIn0.DbEVxhgWv4ANYwpIpCc4iA&zoomwheel=true&fresh=true#10.6/43.6911/-79.3588).
+* A Mapbox style I created as a basemap. [View on Mapbox.](https://api.mapbox.com/styles/v1/iw00/cm6wke90700h201s17joz8hyy.html?title=view&access_token=pk.eyJ1IjoiaXcwMCIsImEiOiJjbTV2aXFlajYwMjZmMmtvbWtrMGRhd3lkIn0.DbEVxhgWv4ANYwpIpCc4iA&zoomwheel=true&fresh=true#10.6/43.6911/-79.3588)
 * Two data layers from different types of data sources.
 
 ## Data
@@ -31,6 +31,6 @@ Source: https://open.toronto.ca/dataset/blacklegged-tick-surveillance/
 
 Includes public parks, beaches, parts of ravines, golf courses, cemeteries, and other open space areas. May be publically or privately accessible/owned/maintained.
 
-Added to map as a Mapbox tileset. [View on Mapbox.](https://studio.mapbox.com/tilesets/iw00.1c0ufy8s).
+Added to map as a Mapbox tileset. [View on Mapbox.](https://studio.mapbox.com/tilesets/iw00.1c0ufy8s)
 
 Source: https://open.toronto.ca/dataset/green-spaces/
