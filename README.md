@@ -8,7 +8,7 @@ Toronto's tick surveillance program monitors the number and location of blackleg
 
 **Dragging locations** are locations that are selected for tick collection and monitoring. Ticks are usually found in areas that are wooded, bushy, or have tall grasses.
 
-This map shows the dragging locations for tick surveillance, as well as Toronto's green spaces, where these locations are typically located.
+This map shows the dragging locations for tick surveillance along with Toronto's green spaces, where these locations are typically located.
 
 The map includes:
 
@@ -31,6 +31,6 @@ Source: https://open.toronto.ca/dataset/blacklegged-tick-surveillance/
 
 Includes public parks, beaches, parts of ravines, golf courses, cemeteries, and other open space areas. Green spaces may be publically or privately accessible/owned/maintained.
 
-Added to map as a Mapbox tileset. [View on Mapbox.](https://studio.mapbox.com/tilesets/iw00.1c0ufy8s)
+Added to map as a Mapbox tileset. [View on Mapbox (requires login).](https://studio.mapbox.com/tilesets/iw00.1c0ufy8s)
 
 Source: https://open.toronto.ca/dataset/green-spaces/
