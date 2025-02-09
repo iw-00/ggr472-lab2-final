@@ -15,7 +15,6 @@ map.on("load", () => {
     map.addSource("green-space-data", {
         type: "vector",
         url: "mapbox://iw00.1c0ufy8s"
-        // data: "data//toronto-green.geojson"
     });
 
     // Draw green spaces.
@@ -35,7 +34,7 @@ map.on("load", () => {
     // Add ticks as points from GitHub (geojson).
     map.addSource("ticks-data", {
         type: "geojson",
-        data: "https://raw.githubusercontent.com/iw-00/ggr472-lab2-test/refs/heads/main/data/toronto-ticks.geojson"
+        data: "https://iw-00.github.io/ggr472-lab2-final/data/toronto-ticks.geojson"
     });
     
     // Draw tick points.
