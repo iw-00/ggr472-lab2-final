@@ -4,8 +4,8 @@ mapboxgl.accessToken = "pk.eyJ1IjoiaXcwMCIsImEiOiJjbTV2aXFlajYwMjZmMmtvbWtrMGRhd
 // Create map object
 const map = new mapboxgl.Map({
     container: "tick-map", // Map container ID
-    style: "mapbox://styles/iw00/cm6wke90700h201s17joz8hyy", // Style URL from Mapbox
-    center: [-79.371, 43.684], // Starting position [lng, lat] in Toronto
+    style: "mapbox://styles/iw00/cm6wke90700h201s17joz8hyy", // Style URL from Mapbox for basemap
+    center: [-79.371, 43.715], // Starting position [lng, lat] in Toronto
     zoom: 10 // Starting zoom level
 })
 
@@ -23,6 +23,7 @@ map.on("load", () => {
         id: "green-space",
         type: "fill",
         source: "green-space-data",
+        // Layer styling.
         paint: {
             "fill-color": "#86D56C",
             "fill-opacity": 0.3,
@@ -42,6 +43,7 @@ map.on("load", () => {
         id: "ticks-pts", // Layer ID
         type: "circle", // Draw as points
         source: "ticks-data",
+        // Layer styling.
         paint: {
             "circle-radius": 4,
             "circle-color": "#ffd903"

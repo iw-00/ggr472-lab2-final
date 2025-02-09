@@ -4,9 +4,16 @@
 
 ## Description
 
-Toronto's tick surveillance program helps to determine the overall risk of Lyme disease in the city. Ticks are found in wooded or bushy areas with lots of leaves on teh ground or where there are tall grasses. As tick populations expand, ticks may be found outside these areas. This map aims to show 
+Toronto's tick surveillance program monitors the number and location of blacklegged ticks, as well as the number of them that carry the bacteria that causes Lyme disease.
 
-Shows dragging locations in Toronto.
+**Dragging locations** are locations that are selected for tick collection and monitoring. Ticks are usually found in areas that are wooded, bushy, or have tall grasses.
+
+This map shows the dragging locations for tick surveillance, as well as Toronto's green spaces, where these locations are typically located.
+
+The map includes:
+
+* A mapbox style I created as a basemap [view here](https://api.mapbox.com/styles/v1/iw00/cm6wke90700h201s17joz8hyy.html?title=view&access_token=pk.eyJ1IjoiaXcwMCIsImEiOiJjbTV2aXFlajYwMjZmMmtvbWtrMGRhd3lkIn0.DbEVxhgWv4ANYwpIpCc4iA&zoomwheel=true&fresh=true#10.6/43.6911/-79.3588).
+* Two data layers from different types of data sources.
 
 ## Data
 
@@ -14,11 +21,7 @@ This map uses two datasets from Toronto Open Data.
 
 ### Blacklegged Tick Surveillance
 
-Data from Toronto’s tick surveillance program which monitors the number of blacklegged ticks, their locations, and the number of them that carry the bacteria that causes Lyme disease.
-
-Tick dragging is a process of collecting ticks in the environment and is done in the spring and fall when adult ticks are active. Dragging locations are selected based on suitable blacklegged tick habitat or a previous confirmed finding of a blacklegged tick. Blacklegged ticks may still be present in very low numbers at a site where none were found by tick dragging efforts. Ticks are found in wooded or bushy areas with lots of leaves on the ground or where there are tall grasses. As tick populations are expanding, it is possible that blacklegged ticks could be present outside the areas identified by Toronto Public Health. In addition, ticks can travel or migrate on the bodies of animals such as birds and therefore can be present in an area for a year in very low numbers and then disappear. The ticks are sent to the National Microbiology Laboratory in Winnipeg for confirmation of species and testing of adults and nymphs for Borrelia burgdorferi.
-
-Data from 2013-2023
+Data collected at dragging locations between 2013-2023. Shown as point data on the map.
 
 Added to map as a GeoJSON.
 
@@ -26,8 +29,8 @@ Source: https://open.toronto.ca/dataset/blacklegged-tick-surveillance/
 
 ### Green Spaces
 
-includes public parks, beaches, parts of ravines, golf courses, cemeteries, and other open space areas such as those offered by various private institutions. These spaces may or may not be publicly accessible and are either publicly owned/maintained or they are privately owned/maintained. 
+Includes public parks, beaches, parts of ravines, golf courses, cemeteries, and other open space areas. May be publically or privately accessible/owned/maintained.
 
-Added to map as a Mapbox tileset.
+Added to map as a Mapbox tileset [view on Mapbox](https://studio.mapbox.com/tilesets/iw00.1c0ufy8s).
 
 Source: https://open.toronto.ca/dataset/green-spaces/
