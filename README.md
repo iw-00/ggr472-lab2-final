@@ -29,7 +29,7 @@ Source: https://open.toronto.ca/dataset/blacklegged-tick-surveillance/
 
 ### Green Spaces
 
-Includes public parks, beaches, parts of ravines, golf courses, cemeteries, and other open space areas. May be publically or privately accessible/owned/maintained.
+Includes public parks, beaches, parts of ravines, golf courses, cemeteries, and other open space areas. Green spaces may be publically or privately accessible/owned/maintained.
 
 Added to map as a Mapbox tileset. [View on Mapbox.](https://studio.mapbox.com/tilesets/iw00.1c0ufy8s)
 
